@@ -1,13 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import {render} from 'react-dom';
+import App from './app';
 import reportWebVitals from './reportWebVitals';
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+import 'normalize.css'
+import {GlobalStyles} from './global-styles'
+import {firebase} from './lib/firebase.prod'
+import {FirebaseContext} from './context/firebase'
+render(
+  <>
+  <FirebaseContext.Provider value = {{firebase}}> 
+    <GlobalStyles />
+      <App />
+  </FirebaseContext.Provider>
+    </>,
   document.getElementById('root')
 );
 
