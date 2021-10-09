@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import {HashRouter as Router, Route, Switch} from 'react-router-dom'
 import * as ROUTES from './constants/routes';
 import {Home , Browse, SignIn, SignUp} from './pages'
 import {IsUserRedirect, ProtectedRoute} from './helpers/routes';
